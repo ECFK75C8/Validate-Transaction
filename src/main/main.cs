@@ -50,14 +50,11 @@ public class Program
 	private static bool compareValue(double x, double y){
 		int num_x = (int) Math.Floor(x); // ignore fraction on x leaving only the whole number e.g 45000.00 gives 45000
 		int num_y = (int) Math.Floor(y); // ignore fraction on y leaving only the whole number e.g 45120.45 gives 45120
-		int len_y = calLength(num_y);    // calculate length of num_y(45120) gives 5
-		
-		if (len_y == 4 && calLength(num_x) == 4) 
-			return true;						  
+		int len_y = calLength(num_y);    // calculate length of num_y(45120) gives 5					  
 
 		if (len_y == 4 && calLength(num_x) == 4){ // Fix issue with amount less than 10,000 by assuming if both amount have
-			if ((num_y - num_x) < 1000)			   // same length as 4 and the payment charges is not greater than 1000.
-				return true;						//  Then the user probably made the right payment.
+			if ((num_y - num_x) < 1000)           // same length as 4 and the payment charges is not greater than 1000.
+				return true;                      //  Then the user probably made the right payment.
 		}
 
 		//num_itter = 1000 if itterValue(len_y = 3). i.e (pow(10, 3) = 1000) 
