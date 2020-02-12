@@ -9,7 +9,7 @@ public class Program
 	
 	/**
 		@param num
-		@returns length.
+		@return length.
 		calculate the length of any given double value.
 		e.g 45123.34 has a length of 5 ignoring the fractions.
 	**/
@@ -41,8 +41,8 @@ public class Program
 	
 
 	/**
-		@params x: amount generated/initiated by our system
-		@params y: amount returned from payment gatway.
+		@param x: amount generated/initiated by our system
+		@param y: amount returned from payment gatway.
 		compare both values to determine if they are equal to ascertain if user made
 		correct payment.
 		@return bool True if the two amount matches and False otherwise.
