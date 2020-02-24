@@ -53,7 +53,7 @@ public class Program
 		int len_y = calLength(num_y);    // calculate length of num_y(45120) gives 5					  
 
 		if (len_y == 4 && calLength(num_x) == 4){ // Fix issue with amount less than 10,000 by assuming if both amount have
-			if ((num_y > num_x) && (num_y - num_x) < 1000)  // same length i.e == 4 and the payment charges is not greater than 1000.
+			if ((num_y >= num_x) && (num_y - num_x) < 1000)  // same length i.e == 4 and the payment charges is not greater than 1000.
 				return true;                      //  Then the user probably made the right payment.
 		}
 
